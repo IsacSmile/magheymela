@@ -5,6 +5,35 @@
   padding: 0;
   box-sizing: border-box;
 }
+/* Custom Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+  height: 10px; /* Height of the scrollbar (for horizontal scrolling) */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Background of the scrollbar track */
+  border-radius: 10px; /* Rounded corners for track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    90deg,
+    rgb(119 147 131) 0%,
+    #7a9b4b 50%,
+    rgb(148 177 3) 100%
+  );
+  border-radius: 10px; /* Rounded corners for thumb */
+  border: 2px solid #f1f1f1; /* Adds a gap between thumb and track */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5a7b35; /* Darker color on hover */
+}
+
+::-webkit-scrollbar-corner {
+  background: #f1f1f1; /* Color of the corner where horizontal and vertical scrollbars meet */
+}
 
 body {
   font-family: "Poppins", serif;
@@ -46,6 +75,48 @@ a {
 .hamburger.open .line:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
 }
+
+
+/* Hide the dropdown menu by default */
+.dropdown-menu {
+  display: none;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  background: linear-gradient(
+    90deg,
+    rgb(119 147 131) 0%,
+    #7a9b4b 50%,
+    rgb(148 177 3) 100%
+  );
+  /* border-bottom: 1px solid #ccc; */
+}
+
+.dropdown .drop-arrow-ctrl{
+  display: flex;
+  align-items: center;
+}
+
+/* Show the dropdown menu when hovering over the parent item */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Style for dropdown items */
+
+.dropdown-menu li a {
+  padding: 8px 16px;
+  text-decoration: none;
+  display: inline-block;
+  color: #333;
+  /* border-left: white; */
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f1f1f14d;
+}
+
 
 /* Navbar Styles */
 .navbar {
@@ -116,7 +187,7 @@ a {
 }
 
 #image-ctrl {
-  height: calc(100vh - 86px);
+  height: calc(100vh - 83px);
 }
 
 .swiper {
@@ -318,9 +389,76 @@ a {
   font-weight: 700;
 }
 
-/* #swiper-slide-ctrl {
-  margin: 0 0.31rem;
-} */
+
+
+
+/* Karmadakshya Starts Here */
+
+.karma-parent-container{
+  background-color: #fff;
+  padding: 2rem 0;
+}
+
+.karma-subparent-conatiner {
+  background: none !important;
+  max-width: 1300px !important;
+  margin: 0 auto;
+}
+
+
+.krma-card-image-container {
+  display: grid;
+  /* gap: 1.5rem; to add space between images */
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+
+.krma-card-image{
+  padding: 1rem;
+}
+
+.krma-card-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-top-left-radius: 10px; 
+  border-top-right-radius: 10px; 
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  transition: all ease-in-out 0.3s;
+}
+.krma-card-image img:hover {
+  box-shadow: 0 1px 2px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.07), 0 4px 8px rgba(0,0,0,0.07), 0 8px 16px rgba(0,0,0,0.07), 0 16px 32px rgba(0,0,0,0.07), 0 32px 64px rgba(0,0,0,0.07);
+  cursor: pointer;
+}
+
+
+@media (max-width: 767px) { /* Mobile */
+  .krma-card-image-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) { /* Tablets */
+  .krma-card-image-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) { /* Laptops and larger screens */
+  .krma-card-image-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+/* Karmadakshya Ends  Here */
+
+
+
+
+
 
 /* Media Queries   */
 /* Media Queries   */
@@ -361,9 +499,32 @@ a {
     padding: 5px 10px;
     border-radius: 5px;
   }
+  .karma-parent-container {
+    background-color: #fff;
+    padding: 0;
+  }
+  .krma-card-image-container {
+    padding: 1rem 0;
+  }
 }
 
 @media (max-width: 768px) {
+
+  .dropdown:hover .dropdown-menu {
+    display: inline-block;
+    background: #0000006b;
+    border-radius: 5px;
+}
+
+  .dropdown-menu {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    background: transparent;
+  }
+
   .navbar-menu {
     gap: 40rem;
   }
@@ -487,6 +648,7 @@ a {
   .latest-news-heading .kite img {
     height: 35px;
   }
+  
 }
 
 @media (max-width: 1199px) and (min-width: 769px) {
