@@ -1,0 +1,56 @@
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+*.pid
+*.seed
+*.pid.lock
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Build output directories
+dist/
+build/
+
+# Compiled files
+*.cache
+*.tmp
+*.swp
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# IDE specific files
+.vscode/
+.idea/
+*.iml
+
+# SASS/SCSS cache
+.sass-cache/
+
+# Temporary files
+*.tmp
+*.bak
+*.backup
+*.swp
+*.swo
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Static asset cache
+.cache/
+
+# Coverage directory
+coverage/
+
+# Other
+*.orig

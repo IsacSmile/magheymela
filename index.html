@@ -1,12 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Maghey Mela 2025</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <h1>Maghey Mela 2025 coming soon...</h1>
-</body>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="containerr">
+        <nav class="navbar-menu">
+          <a href="#"
+            ><img class="navbar-logo" src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736495106/logo-B_ilc7hb.png" alt="Logo"
+          /></a>
+          <ul class="navbar-items">
+            <li><a href="#">Upcoming Events</a></li>
+            <li><a href="#">Organizer</a></li>
+            <li><a href="#">Panchayat Details</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a class="contact" href="#">Contact Us</a></li>
+          </ul>
+          <button class="hamburger" aria-label="Toggle Navigation">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- crasoul image Starts -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img
+            id="image-ctrl"
+            src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736440144/cr-2_ghpgp2.jpg"
+            alt="Image"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            id="image-ctrl"
+            src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736440147/pexels-quang-nguyen-vinh-222549-6711556_o61mg1.jpg"
+            alt="Image"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            id="image-ctrl"
+            src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736440144/cr-1_uxvy4b.jpg"
+            alt="Image"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            id="image-ctrl"
+            src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736440725/1169_dhvtkl.jpg"
+            alt="Image"
+          />
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+    <!-- crasoul image Ends  -->
+
+    <!-- Welcome Message  -->
+    <div class="welcome-heading-container">
+      <img
+        class="bg-img"
+        src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736462424/ribbon-image_bkxmr1.png"
+        alt="ribbon_image"
+      />
+    </div>
+    <!-- Welcome Message  -->
+
+    <!-- Starts Well Wishers Section -->
+    <div class="well-wisher-parent-container" id="well-wisher-sub-conatiner">
+      <div class="well-wishers-section">
+        <!-- Section 1: Buttons -->
+        <div class="section-1">
+          <h2 class="well-wisher-heading">Our Well Wishers</h2>
+          <p class="well-wisher-para">
+            Lorem Ipsum is simply dummy text of the printing simply dummy text
+            of the printing and typesetting industry.
+          </p>
+          <div class="btn-container">
+            <a class="well-wisher-btn" id="btnSabhapati"
+              >Sabhapati
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-arrow-right"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                />
+              </svg>
+            </a>
+            <a class="well-wisher-btn" id="btnSahakariSabhapati"
+              >Sahakari Sabhapati
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-arrow-right"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Section 2: Sabhapati -->
+        <div class="section-2 visible">
+          <div class="section-3-inside-sec-1-2">
+            <h2 class="second-section-heading-1">Smt. Anu Chettri Pradhan.</h2>
+            <h3 class="second-section-heading-2">Sabhapati</h3>
+            <p class="second-section-para">
+              Kurseong is also 34 kilometers (21 miles) from Siliguri and is
+              well-connected to the city by road. Its cool and temperate climate
+              makes it a popular destination for tourists throughout the year,
+              providing a refreshing escape from the plains.
+            </p>
+          </div>
+          <div class="second-section-image">
+            <img
+              src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736462765/sabhati-1_w6ouhe.png"
+              alt="sabhapati_image"
+            />
+          </div>
+        </div>
+
+        <!-- Section 3: Sahakari Sabhapati -->
+        <div class="section-3 hidden">
+          <div class="section-3-inside-sec-1-2">
+            <h2 class="second-section-heading-1">Sri. Narayan Thapa</h2>
+            <h3 class="second-section-heading-2">Sahakari Sabhapati</h3>
+            <p class="second-section-para">
+              Darjeeling is also 34 kilometers (21 miles) from Siliguri and is
+              well-connected to the city by road. Its cool and temperate climate
+              makes it a popular destination for tourists throughout the year,
+              providing a refreshing escape from the plains.
+            </p>
+          </div>
+          <div class="second-section-image">
+            <img
+              src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736462767/sabapati-2_xv2ebn.png"
+              alt="sabhapati_image"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Ends Well Wishers Section -->
+
+    <!-- Starts Latest News  -->
+    <div class="parent-latest-news-container">
+      <div class="latest-news-container">
+        <div class="container">
+          <h1 class="latest-news-heading">
+            Latest News
+            <span class="kite"
+              ><img
+                src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736464340/kite_b374jm.png"
+                alt="kite_ribbon"
+            /></span>
+          </h1>
+          <div class="swiper mySwiper2" id="sub-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" id="swiper-slide-ctrl">
+                <div class="card">
+                  <img
+                    src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736456898/f-3_ykkybc.png"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="swiper-slide" id="swiper-slide-ctrl">
+                <div class="card">
+                  <img
+                    src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736456897/f-4_q4qmim.png"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="swiper-slide" id="swiper-slide-ctrl">
+                <div class="card">
+                  <img
+                    src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736456898/f-3_ykkybc.png"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="swiper-slide" id="swiper-slide-ctrl">
+                <div class="card">
+                  <img
+                    src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736456897/f-1_uyitiv.png"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Ends Latest News  -->
+
+    <!-- Script Starts Our Well Wishers section  -->
+    <script>
+      // Select buttons and sections
+      const btnSabhapati = document.getElementById("btnSabhapati");
+      const btnSahakariSabhapati = document.getElementById(
+        "btnSahakariSabhapati"
+      );
+      const section2 = document.querySelector(".section-2");
+      const section3 = document.querySelector(".section-3");
+
+      // Event listener for "Sabhapati" button
+      btnSabhapati.addEventListener("click", () => {
+        section2.classList.add("visible");
+        section2.classList.remove("hidden");
+        section3.classList.add("hidden");
+        section3.classList.remove("visible");
+      });
+
+      // Event listener for "Sahakari Sabhapati" button
+      btnSahakariSabhapati.addEventListener("click", () => {
+        section3.classList.add("visible");
+        section3.classList.remove("hidden");
+        section2.classList.add("hidden");
+        section2.classList.remove("visible");
+      });
+    </script>
+    <!-- Script Ends here of Our Well Wishers section  -->
+
+    <!-- Swiper code  -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>

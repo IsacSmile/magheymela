@@ -1,11 +1,516 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    font-family: "Poppins", serif;
+body {
+  font-family: "Poppins", serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Main content starts here */
+
+/* hamburger menu  */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  height: 3px;
+  width: 100%;
+  background: white;
+  border-radius: 2px;
+}
+
+.hamburger.open .line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open .line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open .line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Navbar Styles */
+.navbar {
+  background: linear-gradient(
+    90deg,
+    rgb(119 147 131) 0%,
+    #7a9b4b 50%,
+    rgb(148 177 3) 100%
+  );
+  color: white;
+  /* padding: 1rem 0; */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.containerr {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+.navbar-logo {
+  max-height: 70px;
+  display: flex;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 12rem;
+  padding: 0.4rem 0;
+}
+
+.navbar-items {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.navbar-items li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  /* font-weight: bold; */
+  /* transition: color 0.3s; */
+}
+
+.navbar-items li a:hover {
+  color: #ffffff;
+}
+
+.contact {
+  border: 1px solid #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: all ease-in-out 0.3s;
+}
+.contact:hover {
+  border: 1px solid #000000;
+  cursor: pointer;
+  background-color: rgb(26, 18, 18);
+  color: white;
+}
+
+#image-ctrl {
+  height: calc(100vh - 86px);
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #ffffff91 !important;
+}
+
+/* Welcome messgage  */
+
+.bg-img {
+  width: 100%;
+}
+
+.welcome-heading {
+  font-family: "Jaini", serif;
+  text-align: center;
+  font-size: 65px;
+  font-weight: 400;
+  color: #fff;
+}
+
+/* Container and Well-wishers Section Styling */
+.well-wisher-parent-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+#well-wisher-sub-conatiner {
+  padding: 3rem 0;
+}
+.well-wishers-section {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 4rem !important;
+  margin-bottom: 4rem !important;
+  border-radius: 10px;
+  padding: 2.4rem 1.4rem;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+}
+
+/* Section 1 (Button Section) Styling */
+.section-1 {
+  max-width: 40%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 3rem;
+}
+
+/* Section 2 and Section 3 Styling */
+.section-2,
+.section-3 {
+  max-width: 60%;
+  display: flex;
+  padding: 3rem;
+  gap: 2.65rem;
+}
+
+/* Section Inside Content Styling */
+.section-3-inside-sec-1-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Button Styling */
+.well-wisher-btn svg {
+  width: 30px;
+  font-size: 35px;
+  color: rgb(255 156 28) !important;
+}
+
+/* Heading Styling */
+.well-wisher-heading {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 34px;
+  color: #d54056;
+}
+
+/* Button Container and Buttons Styling */
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  font-weight: normal;
+  margin: 0.4rem 0;
+}
+
+.btn-container a {
+  color: black;
+  text-decoration: none;
+  transition: all ease-in-out 0.4s;
+}
+.btn-container a:hover {
+  background-color: black;
+  color: white;
+}
+
+.well-wisher-btn {
+  border: 1px solid #000103;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-weight: normal;
+  margin: 0.4rem 0;
+  background: transparent;
+  text-align: left;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Section Headings Styling */
+.second-section-heading-1 {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.second-section-heading-2 {
+  font-size: 22px;
+  font-weight: 500;
+  color: #000000a6;
+}
+
+/* Image Styling */
+.second-section-image img {
+  width: 196px;
+  height: 286px;
+  border-radius: 20px;
+  opacity: 0.8; /* Adjust opacity as needed */
+  object-fit: cover;
+}
+
+/* Paragraph Styling */
+.second-section-para {
+  text-align: justify;
+  padding-top: 20px;
+}
+
+/* Visibility Toggle Styling */
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+  position: relative;
+  background-color: #fff4f4a8;
+  border-radius: 20px;
+  transition: all ease-in-out 0.3s;
+}
+
+/* Latest News - Swiper JS  */
+.latest-news-heading .kite img {
+  display: block;
+  height: 70px;
+  margin: 0 auto;
+}
+
+.parent-latest-news-container {
+  background-color: #fff4f4a8;
+}
+
+.latest-news-container {
+  padding: 2rem 0;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.latest-news-heading {
+  text-align: center;
+  color: #221f1ffa;
+  text-transform: uppercase;
+}
+
+#sub-container {
+  padding: 3rem 0;
+  font-weight: 700;
+}
+
+/* #swiper-slide-ctrl {
+  margin: 0 0.31rem;
+} */
+
+/* Media Queries   */
+/* Media Queries   */
+
+/* Mobile size  */
+
+@media (max-width: 928px) and (min-width: 769px) {
+  .navbar-menu {
+    gap: 3.4rem !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar-items {
+    padding: 1.33rem !important;
+  }
+  .navbar-menu {
+    gap: 18rem !important;
+  }
+  /* for image crasoul */
+  #image-ctrl {
+    height: 30vh !important;
+  }
+  .latest-news-heading {
+    font-size: 24px;
+    font-weight: 600;
+  }
+  #sub-container {
+    padding: 2rem 0;
+  }
+  .latest-news-container {
+    margin: 1rem auto;
+  }
+  .latest-news-heading .kite img {
+    height: 30px !important;
+  }
+  .contact {
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-menu {
+    gap: 40rem;
+  }
+  .navbar-items {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #000000b5;
+    padding: 2rem 1rem;
+    z-index: 999;
+    transition: all ease-in-out;
+  }
+
+  .navbar-items.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+  #image-ctrl {
+    height: 50vh;
+  }
+
+  #well-wisher-sub-conatiner {
+    padding: 0 0.5rem;
+  }
+  .well-wishers-section {
+    flex-direction: column;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    border-radius: 10px;
+    box-shadow: none;
+    padding: 2.4rem 0.4rem;
+  }
+  .well-wishers-section .well-wisher-heading {
+    font-size: 30px;
+  }
+
+  .well-wisher-btn {
+    border: 1px solid #000103;
+    border-radius: 5px;
+    padding: 10px 10px;
+    font-weight: normal;
+    margin: 0.4rem 0;
+    background: transparent;
+    text-align: left;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .section-1 {
+    max-width: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .section-3 {
+    max-width: 100%;
+    display: flex;
+    padding: 0;
+    gap: 0.65rem;
+  }
+
+  .section-2,
+  .section-3 {
+    max-width: 100%;
+    flex-direction: column-reverse;
+    padding: 0;
+    gap: 0.65rem;
+    align-items: center;
+  }
+
+  .second-section-para {
+    padding-top: 10px;
+  }
+  .second-section-heading-1 {
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .second-section-heading-2 {
+    font-size: 17px;
+    font-weight: 500;
+  }
+
+  .visible {
+    background-color: #f5eded;
+    border-radius: 5px;
+    padding: 1rem;
+  }
+
+  .second-section-image img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  .section-3-inside-sec-1-2 {
+    align-items: center;
+  }
+
+  /* Swiper Js  */
+  .swiper-slide .card {
+    height: 500px;
+    border-radius: 5px;
+  }
+  .latest-news-container {
+    padding: 2rem 0;
+    margin: 2rem auto;
+  }
+  .latest-news-heading {
+    font-weight: 500;
+  }
+  .latest-news-heading .kite img {
+    height: 35px;
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 769px) {
+  .section-2,
+  .section-3 {
+    padding: 1.5rem;
+    align-items: center;
+  }
+  .second-section-heading-1 {
+    font-size: 20px;
+  }
+  .second-section-heading-2 {
+    font-size: 18px;
+  }
+  .section-1 {
+    padding: 1rem;
+  }
+
+  .well-wisher-heading {
+    font-size: 28px;
+  }
+
+  .well-wisher-btn {
+    padding: 10px 10px;
+    margin: 0.4rem 0;
+  }
 }
