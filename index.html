@@ -9,29 +9,32 @@
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
+    /> 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!--Data OS-->
   </head>
   <body>
+
+    <!-- Navbar  -->
     <header class="navbar">
       <div class="containerr">
         <nav class="navbar-menu">
-          <a href="#"
+          <a href="/index.html"
             ><img
               class="navbar-logo"
               src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736495106/logo-B_ilc7hb.png"
               alt="Logo"
           /></a>
           <ul class="navbar-items">
-            <li><a href="#">Upcoming Events</a></li>
+            <li><a href="/pages/events.html">Upcoming Events</a></li>
             <li><a href="#">Organizer</a></li>
             <li class="dropdown">
               <a class="drop-arrow-ctrl" href="#">Panchayat Details <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#e8eaed"><path d="M480-384 288-576h384L480-384Z"/></svg></a>
               <ul class="dropdown-menu">
-                <li><a href="#">panchayat-1</a></li>
-                <li><a href="#">panchayat-2</a></li>
+                <li><a href="/pages/panchayat-members.html">Panchayat Members</a></li>
+                <li><a href="/pages/grampanchayat.html">Grampanchayat</a></li>
               </ul>
             </li>
-            <li><a href="#">Gallery</a></li>
+            <li><a href="/pages/gallery.html">Gallery</a></li>
             <li><a class="contact" href="#">Contact Us</a></li>
           </ul>
           
@@ -45,7 +48,7 @@
     </header>
 
     <!-- crasoul image Starts -->
-    <div class="swiper mySwiper">
+    <div class="swiper mySwiper" data-aos="fade-up">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <img
@@ -82,7 +85,7 @@
     <!-- crasoul image Ends  -->
 
     <!-- Welcome Message  -->
-    <div class="welcome-heading-container">
+    <div class="welcome-heading-container" data-aos="fade-up">
       <img
         class="bg-img"
         src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736462424/ribbon-image_bkxmr1.png"
@@ -92,14 +95,13 @@
     <!-- Welcome Message  -->
 
     <!-- Starts Well Wishers Section -->
-    <div class="well-wisher-parent-container" id="well-wisher-sub-conatiner">
+    <div class="well-wisher-parent-container" id="well-wisher-sub-conatiner" data-aos="fade-up">
       <div class="well-wishers-section">
         <!-- Section 1: Buttons -->
         <div class="section-1">
           <h2 class="well-wisher-heading">Our Well Wishers</h2>
           <p class="well-wisher-para">
-            Lorem Ipsum is simply dummy text of the printing simply dummy text
-            of the printing and typesetting industry.
+            Inspiring Hope and Positive Change Through Selfless Actions!
           </p>
           <div class="btn-container">
             <a class="well-wisher-btn" id="btnSabhapati"
@@ -143,10 +145,10 @@
             <h2 class="second-section-heading-1">Smt. Anu Chettri Pradhan.</h2>
             <h3 class="second-section-heading-2">Sabhapati</h3>
             <p class="second-section-para">
-              Kurseong is also 34 kilometers (21 miles) from Siliguri and is
-              well-connected to the city by road. Its cool and temperate climate
-              makes it a popular destination for tourists throughout the year,
-              providing a refreshing escape from the plains.
+              Smt. Anu Chettri Pradhan, a primary teacher and President of the Bharatiya 
+              Gorkha Prajatantrik Morcha Nari Shakti, is an energetic, compassionate leader 
+              engaged in social work. Outspoken and humble, she tirelessly 
+              supports the underprivileged with dedication.
             </p>
           </div>
           <div class="second-section-image">
@@ -163,10 +165,9 @@
             <h2 class="second-section-heading-1">Sri. Narayan Thapa</h2>
             <h3 class="second-section-heading-2">Sahakari Sabhapati</h3>
             <p class="second-section-para">
-              Darjeeling is also 34 kilometers (21 miles) from Siliguri and is
-              well-connected to the city by road. Its cool and temperate climate
-              makes it a popular destination for tourists throughout the year,
-              providing a refreshing escape from the plains.
+              Sri Narayan Thapa, from Sittong, an agricultural region in Kurseong, is an energetic 
+              individual committed to supporting farmers in the Kurseong Panchayat area, 
+              always leading efforts to assist them due to his strong agricultural background..
             </p>
           </div>
           <div class="second-section-image">
@@ -181,11 +182,11 @@
     <!-- Ends Well Wishers Section -->
 
     <!-- Starts Latest News  -->
-    <div class="parent-latest-news-container">
+    <div class="parent-latest-news-container" data-aos="fade-up">
       <div class="latest-news-container">
         <div class="container">
           <h1 class="latest-news-heading">
-            Latest News
+            Featured Events
             <span class="kite"
               ><img
                 src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736464340/kite_b374jm.png"
@@ -194,53 +195,78 @@
           </h1>
           <div class="swiper mySwiper2" id="sub-container">
             <div class="swiper-wrapper">
+
               <div class="swiper-slide" id="swiper-slide-ctrl">
                 <div class="card">
                   <img
-                    src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736456898/f-3_ykkybc.png"
+                    src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736626918/f-1_hjvrxc.jpg"
                     class="card-img-top"
-                    alt="..."
+                    alt="flyer-1"
                   />
                 </div>
               </div>
               <div class="swiper-slide" id="swiper-slide-ctrl">
                 <div class="card">
                   <img
-                    src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736456897/f-4_q4qmim.png"
+                    src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736626917/f-2_twf7os.jpg"
                     class="card-img-top"
-                    alt="..."
+                    alt="flyer-2"
                   />
                 </div>
               </div>
               <div class="swiper-slide" id="swiper-slide-ctrl">
                 <div class="card">
                   <img
-                    src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736456898/f-3_ykkybc.png"
+                    src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736626918/f-1_hjvrxc.jpg"
                     class="card-img-top"
-                    alt="..."
+                    alt="flyer-1"
                   />
                 </div>
               </div>
               <div class="swiper-slide" id="swiper-slide-ctrl">
                 <div class="card">
                   <img
-                    src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736456897/f-1_uyitiv.png"
+                    src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736626917/f-2_twf7os.jpg"
                     class="card-img-top"
-                    alt="..."
+                    alt="flyer-2"
                   />
                 </div>
               </div>
             </div>
           </div>
+          <a href="/pages/events.html"><button class="swiperr-events">View All Events</button></a>
         </div>
       </div>
     </div>
     <!-- Ends Latest News  -->
 
+    <!-- Officials -->
+     <div class="parent-official-container">
+      <div class="sub-official-container">
+        <h1 class="official-heading">Officials</h1>
+        <div class="official-grid-container">
+          <div class="official-card">
+            <img src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736619544/O-1_fkow2l.png" alt="image">
+          </div>
+          <div class="official-card">
+            <img src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736619675/O-2_lflpzf.png" alt="image">
+          </div>
+          <div class="official-card">
+            <img src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736619544/O-3_w3ykp8.png" alt="image">
+          </div>
+          <div class="official-card">
+            <img src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736619543/O-4_xkhjd6.png" alt="image">
+          </div>
+        </div>
+      </div>
+     </div>
+    <!-- Officials -->
+
+
     <!-- Karmadakshya Starts Here -->
 
     <div class="karma-parent-container">
-      <div class="karma-subparent-conatiner parent-latest-news-container">
+      <div class="karma-subparent-conatiner parent-latest-news-container" data-aos="fade-up">
         <h1 class="karma-heading latest-news-heading">
           Karmadakshya
           <!-- <span class="kite">
@@ -250,40 +276,68 @@
             />
           </span>  -->
         </h1>
-        <div class="krma-card-image-container">
+        <div class="krma-card-image-container" class="fade-up">
           <div class="krma-card-image">
-            <img src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736515252/k-1_ojupvv.png" alt="leader-image">
+            <img src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736620730/k-1_cro61q.png" alt="leader-image">
           </div>
           <div class="krma-card-image">
-            <img src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736515254/k-2_nslglp.png" alt="leader-image">
+            <img src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736620730/k-2_t7pja5.png" alt="leader-image">
           </div>
           <div class="krma-card-image">
-            <img src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736515250/k-3_c3uzj5.png" alt="leader-image">
+            <img src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736620730/k-3_fo5wmu.png" alt="leader-image">
           </div>
           <div class="krma-card-image">
-            <img src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736515250/k-4_qup8l6.png" alt="leader-image">
+            <img src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736620742/k-4_xaan9m.png" alt="leader-image">
           </div>
           <div class="krma-card-image">
-            <img src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736504672/k-5_iotsok.png" alt="leader-image">
+            <img src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736620728/k-5_d5yiym.png" alt="leader-image">
           </div>
           <div class="krma-card-image">
-            <img src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736515250/k-6_fnafhx.png" alt="leader-image">
+            <img src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736620730/k-6_a13eiv.png" alt="leader-image">
           </div>
           <div class="krma-card-image">
-            <img src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736515251/k-7_t0yymm.png" alt="leader-image">
+            <img src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736620730/k-7_wn7ib6.png" alt="leader-image">
           </div>
           <div class="krma-card-image">
-            <img src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736515251/k-8_hrvwmr.png" alt="leader-image">
+            <img src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736620730/k-8_k4q74z.png" alt="leader-image">
           </div>
           <div class="krma-card-image">
-            <img src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736515252/k-9_o91nvn.png" alt="leader-image">
+            <img src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736620729/k-9_yz59qr.png" alt="leader-image">
           </div>
         </div>
-        
       </div>
     </div>
-
     <!-- Karmadakshya Ends Here -->
+
+
+    <!-- Panchayat Samiti Members STARTS here -->
+
+    <!-- Swiper Starts Js Section  -->
+     <div class="panchayat-swiperr-parent-conatainer" data-aos="fade-up">
+      <div class="panchayat-swiperr-container">
+          <div>
+            <h1 class="panchayat-swiper-heading">Panchayat <br> Samiti Members</h1>
+          </div>
+          <div class="panchayat-original-swiper-card">
+            <swiper-container class="mySwiperr" effect="cards" grab-cursor="true">
+              <swiper-slide><img src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736619902/s-17_asnzhp.png" alt="image"></swiper-slide>
+              <swiper-slide><img src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736619841/s-6_cvtwwx.png" alt="image"></swiper-slide>
+              <swiper-slide><img src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736619839/s-9_fwoxws.png" alt="image"></swiper-slide>
+              <swiper-slide><img src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736619839/s-1_oxiya1.png" alt="image"></swiper-slide>
+              <swiper-slide><img src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736619842/s-14_ergyfd.png" alt="image"></swiper-slide>
+            </swiper-container>
+          </div>
+          <a class="button-ctrl-swiper" href="/pages/panchayat-members.html">
+            <div class="panchayat-btn">View All <svg class="panchayat-svg" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+            <path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z" />
+          </svg>
+          </div>
+        </a>
+      </div>
+     </div>
+    <!-- Panchayat Samiti Members ENDS here -->
+
+<br><br>
 
     <!-- Script Starts Our Well Wishers section  -->
     <script>
@@ -316,5 +370,11 @@
     <!-- Swiper code  -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <!--Data OS-->
+    <script>
+      AOS.init();
+    </script>
+
   </body>
 </html>

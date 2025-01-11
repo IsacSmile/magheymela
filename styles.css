@@ -37,6 +37,7 @@
 
 body {
   font-family: "Poppins", serif;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -62,61 +63,87 @@ a {
   width: 100%;
   background: white;
   border-radius: 2px;
+  transition: all ease-in-out 0.3s;
 }
 
 .hamburger.open .line:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+  transform: rotate(45deg) translate(7px, 7px);
+  transition: all ease-in-out 0.3s;
 }
 
 .hamburger.open .line:nth-child(2) {
   opacity: 0;
+  transition: all ease-in-out 0.3s;
 }
 
 .hamburger.open .line:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
+  transition: all ease-in-out 0.3s;
 }
-
 
 /* Hide the dropdown menu by default */
+
+/* here dropdown menu customize */
 .dropdown-menu {
-  display: none;
+  display: block; /* Keep display as block to enable transitions */
+  opacity: 0; /* Start hidden */
+  transform: translateY(-20px); /* Slide up initially */
+  transition: all 0.3s ease; /* Smooth transition */
   list-style-type: none;
-  padding: 0;
+  padding: 10px; /* Add spacing for menu items */
   margin: 0;
   position: absolute;
+  z-index: 9999;
+  overflow: hidden;
+  /* background: rgba(255, 255, 255, 0.548);  */
   background: linear-gradient(
     90deg,
-    rgb(119 147 131) 0%,
-    #7a9b4b 50%,
-    rgb(148 177 3) 100%
+    rgba(119, 147, 131, 0.692) 0%,
+    #7a9b4b9d 50%,
+    rgba(148, 177, 3, 0.692) 100%
   );
-  /* border-bottom: 1px solid #ccc; */
+  --backdrop-filter: blur(20px) saturate(150%); /* Glass effect: blur and saturation */
+  border-radius: 10px; /* Rounded corners */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Light border for the glass effect */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  visibility: hidden; /* Ensure it's completely hidden */
 }
 
-.dropdown .drop-arrow-ctrl{
-  display: flex;
-  align-items: center;
-}
-
-/* Show the dropdown menu when hovering over the parent item */
 .dropdown:hover .dropdown-menu {
-  display: block;
+  opacity: 1; /* Make the menu visible */
+  transform: translateY(0); /* Slide down */
+  visibility: visible; /* Show menu */
 }
 
-/* Style for dropdown items */
+/* Add some spacing and styles to menu items */
+.dropdown-menu li {
+  margin: 5px 0;
+}
+.dropdown-menu li a:hover {
+  border-radius: 10px;
+}
 
 .dropdown-menu li a {
-  padding: 8px 16px;
+  display: block;
+  padding: 10px;
+  color: #fff;
   text-decoration: none;
-  display: inline-block;
-  color: #333;
-  /* border-left: white; */
+  transition: background-color 0.3s ease;
+  border-radius: 10px;
 }
 
 .dropdown-menu li a:hover {
-  background-color: #f1f1f14d;
+  background-color: rgba(255, 255, 255, 0.2); /* Slight highlight on hover */
 }
 
+/* Style for the dropdown trigger */
+.dropdown .drop-arrow-ctrl {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* here dropdown menu customize */
 
 /* Navbar Styles */
 .navbar {
@@ -127,7 +154,6 @@ a {
     rgb(148 177 3) 100%
   );
   color: white;
-  /* padding: 1rem 0; */
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -276,7 +302,13 @@ a {
 .well-wisher-btn svg {
   width: 30px;
   font-size: 35px;
-  color: rgb(255 156 28) !important;
+  color: rgb(0, 0, 0) !important;
+  transition: all ease-in-out 0.3s;
+}
+.well-wisher-btn:hover svg {
+  width: 30px;
+  font-size: 35px;
+  color: rgb(255, 255, 255) !important;
 }
 
 /* Heading Styling */
@@ -316,6 +348,8 @@ a {
   text-align: left;
   font-weight: 600;
   cursor: pointer;
+  display: flex; /*used to center svg arrow */
+  align-items: center; /*used to center svg arrow */
 }
 
 /* Section Headings Styling */
@@ -382,6 +416,7 @@ a {
   text-align: center;
   color: #221f1ffa;
   text-transform: uppercase;
+  font-weight: 600;
 }
 
 #sub-container {
@@ -391,10 +426,100 @@ a {
 
 
 
+/* official */
+.parent-official-container{
+  background: rgb(240 249 255 / 59%);
+  padding: 2rem 0;
+}
+.sub-official-container{
+  max-width: 1300px;
+  margin: 2rem auto;
+}
+
+.official-heading{
+  text-align: center;
+  text-align: center;
+  color: #221f1ffa;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.official-grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  padding: 3rem 3rem;
+}
+
+.official-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  max-width: 250px;
+}
+
+.official-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.official-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 500px) {
+  .parent-official-container{
+    padding: 1rem 0 0px 0;
+  }
+  .official-grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 2rem 1rem;
+  }
+  .official-card img {
+    width: 100%;
+    height: auto;
+  }
+  .official-heading{
+    font-size: 24px;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 501px){
+  .official-grid-container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 1.5rem 1rem;
+  }
+  .official-card img {
+    width: 100%;
+    height: auto;
+  }
+  .official-heading{
+    font-size: 32px;
+    font-weight: 500;
+  }
+}
+
+
+/* official */
+
+
+
+
+
+
+
+
 
 /* Karmadakshya Starts Here */
 
-.karma-parent-container{
+.karma-parent-container {
   background-color: #fff;
   padding: 2rem 0;
 }
@@ -405,7 +530,6 @@ a {
   margin: 0 auto;
 }
 
-
 .krma-card-image-container {
   display: grid;
   /* gap: 1.5rem; to add space between images */
@@ -414,8 +538,7 @@ a {
   padding: 2rem 0;
 }
 
-
-.krma-card-image{
+.krma-card-image {
   padding: 1rem;
 }
 
@@ -423,60 +546,136 @@ a {
   width: 100%;
   height: auto;
   display: block;
-  border-top-left-radius: 10px; 
-  border-top-right-radius: 10px; 
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   transition: all ease-in-out 0.3s;
 }
 .krma-card-image img:hover {
-  box-shadow: 0 1px 2px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.07), 0 4px 8px rgba(0,0,0,0.07), 0 8px 16px rgba(0,0,0,0.07), 0 16px 32px rgba(0,0,0,0.07), 0 32px 64px rgba(0,0,0,0.07);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07),
+    0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07),
+    0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
   cursor: pointer;
 }
 
-
-@media (max-width: 767px) { /* Mobile */
-  .krma-card-image-container {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) { /* Tablets */
+@media (max-width: 767px) {
+  /* Mobile */
   .krma-card-image-container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (min-width: 1024px) { /* Laptops and larger screens */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Tablets */
   .krma-card-image-container {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-
-/* Karmadakshya Ends  Here */
-
-
-
-
-
-
-/* Media Queries   */
-/* Media Queries   */
-
-/* Mobile size  */
-
-@media (max-width: 928px) and (min-width: 769px) {
-  .navbar-menu {
-    gap: 3.4rem !important;
+@media (min-width: 1024px) {
+  /* Laptops and larger screens */
+  .krma-card-image-container {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
+/* Karmadakshya Ends  Here */
+
+/* Panchayat Samiti Starts Here  */
+
+.panchayat-swiperr-parent-conatainer {
+  max-width: 1700px;
+  margin: 0 auto;
+  background: #fff8f8;
+  border-radius: 20px;
+  padding: 0 1rem;
+}
+.panchayat-swiperr-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 2rem 0;
+}
+
+.panchayat-swiper-heading {
+  font-size: 40px;
+}
+
+.panchayat-original-swiper-card swiper-container {
+  width: 220px;
+  height: 300px;
+}
+
+.panchayat-original-swiper-card swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  color: #fff;
+}
+
+.panchayat-original-swiper-card swiper-slide img {
+  object-fit: contain;
+  max-width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.panchayat-btn {
+  display: inline-flex;
+  gap: 2rem;
+  border: 1px solid #000000;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: all ease-in-out 0.3s;
+  position: relative;
+  top: 80px;
+  font-weight: 500;
+}
+
+.button-ctrl-swiper {
+  color: black;
+}
+
+.panchayat-btn a:hover {
+  color: white;
+}
+
+.panchayat-btn:hover {
+  cursor: pointer;
+  background-color: rgb(26, 18, 18);
+  color: white;
+}
+
+.panchayat-svg {
+  fill: #000;
+  transition: fill 0.3s ease;
+}
+
+.panchayat-btn:hover .panchayat-svg {
+  fill: #fff;
+}
+
+/* Media Queries   */
+/* Media Queries   */
+
+@media (max-width: 982px) and (min-width: 769px) {
+  .navbar-menu {
+    gap: 3.4rem !important;
+  }
+  .navbar-items {
+    gap: 1rem;
+  }
+}
+
+/* Mobile size  */
 @media (max-width: 500px) {
   .navbar-items {
     padding: 1.33rem !important;
   }
   .navbar-menu {
-    gap: 18rem !important;
+    gap: 17rem !important;
   }
   /* for image crasoul */
   #image-ctrl {
@@ -506,15 +705,45 @@ a {
   .krma-card-image-container {
     padding: 1rem 0;
   }
+
+  /* Panchayat Swiper Effect Card  */
+  .panchayat-swiperr-container {
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .panchayat-swiper-heading {
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+  }
+  .panchayat-btn {
+    display: inline-flex;
+    gap: 2rem;
+    border: 1px solid #000000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all ease-in-out 0.3s;
+    position: relative;
+    top: 0;
+
+    font-weight: 500;
+  }
+  .panchayat-swiperr-parent-conatainer {
+    background: #f6f4ff;
+    border-radius: 0px;
+    margin: 0 1rem;
+  }
 }
 
 @media (max-width: 768px) {
-
   .dropdown:hover .dropdown-menu {
     display: inline-block;
     background: #0000006b;
     border-radius: 5px;
-}
+  }
 
   .dropdown-menu {
     display: none;
@@ -637,10 +866,14 @@ a {
   .swiper-slide .card {
     height: 500px;
     border-radius: 5px;
+    padding: 0 1rem
+  }
+  .card img{
+    border-radius: 5px;
   }
   .latest-news-container {
     padding: 2rem 0;
-    margin: 2rem auto;
+    margin: 2rem auto 0rem auto;
   }
   .latest-news-heading {
     font-weight: 500;
@@ -648,7 +881,15 @@ a {
   .latest-news-heading .kite img {
     height: 35px;
   }
-  
+
+  /* panchayat samiti */
+  .panchayat-swiper-heading {
+    font-size: 30px;
+  }
+  .panchayat-original-swiper-card swiper-container {
+    width: 200px;
+    height: 280px;
+  }
 }
 
 @media (max-width: 1199px) and (min-width: 769px) {
@@ -675,4 +916,27 @@ a {
     padding: 10px 10px;
     margin: 0.4rem 0;
   }
+}
+
+/*  swiperr-events in html line number (238) */
+.swiperr-events {
+  margin: 0 auto;
+  display: block;
+  padding: 15px 25px;
+  border: 1px solid #333;
+  background: transparent;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 5px;
+  transition: all ease-in-out 0.3s;
+  color: black;
+}
+.swiperr-events a {
+  color: inherit;
+}
+
+.swiperr-events:hover {
+  color: #fff;
+  background: #333;
+  cursor: pointer;
 }
