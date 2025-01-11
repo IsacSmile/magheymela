@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery - Maghey Mela 2025</title>
+    <!--Main CSS Imported-->
+    <link rel="stylesheet" href="/styles.css" />
+    <!--Data OS-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/pages/gallery.css" />
+  </head>
+
+  <body>
+    <!-- Navbar Starts  -->
+    <header class="navbar">
+      <div class="containerr">
+        <nav class="navbar-menu">
+          <a href="/index.html"
+            ><img
+              class="navbar-logo"
+              src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736495106/logo-B_ilc7hb.png"
+              alt="Logo"
+          /></a>
+          <ul class="navbar-items">
+            <li><a href="/pages/events.html">Upcoming Events</a></li>
+            <li><a href="#">Organizer</a></li>
+            <li class="dropdown">
+              <a class="drop-arrow-ctrl" href="#"
+                >Panchayat Details
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="20px"
+                  viewBox="0 -960 960 960"
+                  width="20px"
+                  fill="#e8eaed"
+                >
+                  <path d="M480-384 288-576h384L480-384Z" /></svg></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="/pages/panchayat-members.html">Panchayat Members</a>
+                </li>
+                <li><a href="/pages/grampanchayat.html">Grampanchayat</a></li>
+              </ul>
+            </li>
+            <li><a href="/pages/gallery.html">Gallery</a></li>
+            <li><a class="contact" href="#">Contact Us</a></li>
+          </ul>
+
+          <button class="hamburger" aria-label="Toggle Navigation">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+    <!-- Navbar Ends  -->
+
+
+    <!-- Gallery Sections Starts here  -->
+
+    <div class="gallery-parent-container" data-aos="fade-up">
+        <div class="sub-gallery-container">
+            <h1 class="gallery-heading">Gallery</h1>
+        <div class="gallery">
+            <!-- Image Items -->
+            <div class="gallery-item" data-type="image" data-src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736440144/cr-1_uxvy4b.jpg">
+                <img src="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736440144/cr-1_uxvy4b.jpg" alt="Image 1">
+            </div>
+            <div class="gallery-item" data-type="image" data-src="https://res.cloudinary.com/diajszama/image/upload/v1736623670/g-8_b9cgxi.jpg">
+                <img src="https://res.cloudinary.com/diajszama/image/upload/v1736623670/g-8_b9cgxi.jpg" alt="Image 1">
+            </div>
+            <div class="gallery-item" data-type="image" data-src="https://res.cloudinary.com/diajszama/image/upload/v1736623670/g-9_zetk8j.jpg">
+                <img src="https://res.cloudinary.com/diajszama/image/upload/v1736623670/g-9_zetk8j.jpg" alt="Image 1">
+            </div>
+            <div class="gallery-item" data-type="image" data-src="https://res.cloudinary.com/diajszama/image/upload/v1736623669/g-6_tragcg.jpg">
+                <img src="https://res.cloudinary.com/diajszama/image/upload/v1736623669/g-6_tragcg.jpg" alt="Image 1">
+            </div>
+            <div class="gallery-item" data-type="image" data-src="https://res.cloudinary.com/diajszama/image/upload/v1736623669/g-5_fxcvum.jpg">
+                <img src="https://res.cloudinary.com/diajszama/image/upload/v1736623669/g-5_fxcvum.jpg" alt="Image 1">
+            </div>
+            <div class="gallery-item" data-type="image" data-src="https://res.cloudinary.com/diajszama/image/upload/v1736623669/g-7_vcdnqr.jpg">
+                <img src="https://res.cloudinary.com/diajszama/image/upload/v1736623669/g-7_vcdnqr.jpg" alt="Image 1">
+            </div>
+            <div class="gallery-item" data-type="image" data-src="https://res.cloudinary.com/diajszama/image/upload/v1736623669/g-1_hvdkvc.jpg">
+                <img src="https://res.cloudinary.com/diajszama/image/upload/v1736623669/g-1_hvdkvc.jpg" alt="Image 1">
+            </div>
+            <div class="gallery-item" data-type="image" data-src="https://res.cloudinary.com/diajszama/image/upload/v1736623669/g-4_n8uoaq.jpg">
+                <img src="https://res.cloudinary.com/diajszama/image/upload/v1736623669/g-4_n8uoaq.jpg" alt="Image 1">
+            </div>
+            <div class="gallery-item" data-type="image" data-src="https://res.cloudinary.com/diajszama/image/upload/v1736623669/g-3_hcmcb2.jpg">
+                <img src="https://res.cloudinary.com/diajszama/image/upload/v1736623669/g-3_hcmcb2.jpg" alt="Image 1">
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+            <img id="lightbox-image" src="" alt="">
+            <video id="lightbox-video" controls></video>
+        </div>
+        </div>
+    </div>
+
+        <!-- Gallery Sections Ends here  -->
+
+
+
+    <script>
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightbox-image');
+        const lightboxVideo = document.getElementById('lightbox-video');
+
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const type = item.getAttribute('data-type');
+                const src = item.getAttribute('data-src');
+
+                if (type === 'image') {
+                    lightboxImage.src = src;
+                    lightboxImage.style.display = 'block';
+                    lightboxVideo.style.display = 'none';
+                } else if (type === 'video') {
+                    lightboxVideo.src = src;
+                    lightboxVideo.style.display = 'block';
+                    lightboxImage.style.display = 'none';
+                }
+
+                lightbox.classList.add('active');
+            });
+        });
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            lightboxImage.src = '';
+            lightboxVideo.src = '';
+        }
+    </script>
+
+
+
+
+
+    
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!--Data OS-->
+    <script src="/script.js"></script>
+    <!--Main Java Script Imported-->
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

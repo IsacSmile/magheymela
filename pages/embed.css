@@ -1,0 +1,16 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+.embed{
+    height: 100vh;
+}
+
+.embed iframe{
+    width: 100%;
+    height: 100vh;
+}
