@@ -8,6 +8,7 @@
       {
         "frame-title": "off"
       }
-    ]
+    ],
+    "no-inline-styles": "off"
   }
 }

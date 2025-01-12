@@ -208,7 +208,7 @@ a {
 .contact:hover {
   border: 1px solid #000000;
   cursor: pointer;
-  background-color: rgb(26, 18, 18);
+  background-color: #333;
   color: white;
 }
 

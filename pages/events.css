@@ -78,16 +78,18 @@ body {
   display: block;
   width: 100%;
   padding: 10px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
+  background-color: transparent;
+  color: #333;
+  border: 1px solid black;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
+  font-size: 16px;
 }
 
 .card button:hover {
-  background-color: #0056b3;
+  background-color: #333;
+  color: white;
 }
 
 @media (max-width: 600px) {
@@ -108,3 +110,4 @@ body {
     gap: 2rem;
   }
 }
+
