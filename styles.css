@@ -279,7 +279,7 @@ a {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  padding: 3rem;
+  padding: 3rem 1rem;
 }
 
 /* Section 2 and Section 3 Styling */
@@ -942,5 +942,92 @@ a {
 .swiperr-events:hover {
   color: #fff;
   background: #333;
+  cursor: pointer;
+}
+
+
+/* Footer  */
+/* Footer  */
+
+.footer-parent-container{
+  background: #000000;
+  color: white;
+  padding: 3rem 1rem;
+  margin: 3rem 0 0 0;
+}
+.sub-container{
+  display: flex;
+  /* grid-template-columns: repeat(3, 1fr); */
+  justify-content: space-around;
+  gap: 2rem;
+  max-width: 1300px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.item-container img{
+  height: 120px;
+}
+.item-container li{
+  list-style: none;
+}
+
+.social-icons img{
+  height: 30px;
+}
+
+.item-container-2 .arrow-edit{
+  color: #FF0000;
+  padding: 0 3px;
+}
+.item-container-1,
+.item-container-2,
+.item-container-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.33rem;
+}
+
+.item-container a{
+  color: white;
+  transition: all ease-in-out 0.3s;
+}
+.item-container a:hover{
+  color: rgba(161, 154, 154, 0.836);
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .sub-container{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .signature-container{
+    font-size: 13px;
+    padding: 1rem 0;
+  }
+}
+
+/* Signature | Copyright */
+.signature-container{
+  background: #D53F56;
+  color: white;
+  text-align: center;
+  font-weight: normal;
+  padding: 0.4rem 0;
+  /* display: flex;
+  align-items: center;
+  justify-content: space-around; */
+}
+
+#signature-2{
+  font-size: 14px;
+}
+#signature-2 a{
+  color: white;
+}
+
+.social-icons img:hover{
   cursor: pointer;
 }
