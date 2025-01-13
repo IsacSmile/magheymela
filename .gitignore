@@ -47,7 +47,8 @@ Thumbs.db
 .env.*.local
 
 # Static asset cache
-.cache/
+/cache/
+*.cache/
 
 # Coverage directory
 coverage/
