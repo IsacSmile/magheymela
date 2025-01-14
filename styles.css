@@ -576,10 +576,10 @@ a {
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1000px) {
   /* Laptops and larger screens */
   .krma-card-image-container {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 

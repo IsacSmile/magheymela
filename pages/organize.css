@@ -1,0 +1,24 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #fff;
+}
+
+.parent-organizer .sub-parent-organizer{
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.parent-organizer .organizer-img{
+    background-image: url("/images/others/organizer-img.webp");
+    height: 500px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-size: contain; */
+    background-size: cover;
+    border-radius: 20px;
+}
