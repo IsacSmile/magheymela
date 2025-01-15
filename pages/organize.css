@@ -1,24 +1,80 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background: #fff;
+body {
+  background: #fff;
 }
 
-.parent-organizer .sub-parent-organizer{
-    max-width: 1300px;
-    margin: 0 auto;
+.parent-organizer .sub-parent-organizer {
+  max-width: 1300px;
+  margin: 2rem auto;
+  box-shadow: 3px 3px 5px 0px rgb(0 0 0 / 5%), -3px -3px 5px 0px rgb(0 0 0 / 8%);
+  padding: 2rem 0;
+  border-radius: 15px;
 }
-.parent-organizer .organizer-img{
-    background-image: url("/images/others/organizer-img.webp");
-    height: 500px;
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    /* background-size: contain; */
-    background-size: cover;
-    border-radius: 20px;
+.parent-organizer .organizer-img {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+}
+.parent-organizer .organizer-img img {
+  max-height: 350px;
+  max-width: 100%;
+  border: 2px solid #333;
+  border-radius: 15px;
+  object-fit: contain;
+  margin: 0 auto;
+  transition: all ease-in-out 0.3s;
+}
+.parent-organizer .organizer-img img:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+
+
+.parent-organizer .about-organizer {
+  font-size: 17px;
+  text-align: left;
+  padding: 1rem 2rem;
+  /* margin: 1rem 0; */
+}
+
+
+.about-organizer h1{
+    color: #333;
+}
+
+
+/* media queries  */
+
+@media (max-width: 1250px) and (min-width: 770px) {
+    .parent-organizer .organizer-img img{
+        max-height: 300px;
+    }
+    
+    .parent-organizer .sub-parent-organizer {
+        margin: 2rem auto;
+    }
+}
+
+@media (max-width: 769px) and (min-width: 500px) {
+    .parent-organizer .sub-parent-organizer {
+        margin: 2rem;
+    }
+    
+}
+@media (max-width: 768px) and (min-width: 1px) {
+    .parent-organizer .sub-parent-organizer {
+        margin: 1rem;
+        padding: 0.5rem 1rem;
+    }
+    .parent-organizer .about-organizer {
+        padding: 0;
+    }
 }
