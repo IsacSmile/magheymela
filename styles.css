@@ -859,15 +859,24 @@ a {
     gap: 1rem;
   }
 }
+@media (max-width: 375px) {
+  .navbar-menu {
+      gap: 15rem !important;
+  }
+}
+
+@media (max-width: 500px) and (min-width: 376px) {
+  .navbar-menu {
+      gap: 17rem !important;
+  }
+}
 
 /* Mobile size  */
 @media (max-width: 500px) {
   .navbar-items {
     padding: 1.33rem !important;
   }
-  .navbar-menu {
-    gap: 17rem !important;
-  }
+  
   /* for image crasoul */
   #image-ctrl {
     height: 30vh !important;
