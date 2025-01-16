@@ -8,11 +8,34 @@ hamburger.addEventListener("click", () => {
 });
 // For navbar hamburger menu 
 
+// Modal Popup Js 
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("modal");
+  const closeModal = document.getElementById("closeModal");
+
+  // Show modal after 3 seconds
+  setTimeout(() => {
+    modal.classList.add("active");
+  }, 3000);
+
+  // Close modal on button click
+  closeModal.addEventListener("click", () => {
+    modal.classList.remove("active");
+  });
+
+  // Close modal on clicking outside the content
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.remove("active");
+    }
+  });
+});
+// Modal Popup Js 
 
 
 
 
-
+// Swiper Slider 
 var swiper1 = new Swiper(".mySwiper", {
     loop: true, // Enable infinite loop
     slidesPerView: 1, // Default number of slides visible
@@ -44,6 +67,8 @@ var swiper1 = new Swiper(".mySwiper", {
       },
     },
   });
+
+
 
       var swiper2 = new Swiper(".mySwiper2", {
         loop: true, // Enable infinite loop
