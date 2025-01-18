@@ -13,6 +13,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="/pages/gallery.css" />
     <link rel="shortcut icon" href="https://res.cloudinary.com/dfuufhc0v/image/upload/v1736700912/maghey-favicon_zyznuk.ico" type="image/x-icon">
+    <script src="/pages/disable.js"></script>
   </head>
 
   <body>
@@ -68,7 +69,14 @@
 
     <div class="gallery-parent-container" data-aos="fade-up">
         <div class="sub-gallery-container">
-            <h1 class="gallery-heading">Gallery</h1>
+            <div class="marker">
+              <h1 class="gallery-heading">Gallery</h1>
+            <img
+          src="/images/others/marker.png"
+          alt="marker"
+          loading="eager"/>
+            </div>
+            
         <div class="gallery">
             <!-- Image Items -->
             <div class="gallery-item" data-type="image" data-src="/images/gallery/g-1.jpg" loading="lazy">

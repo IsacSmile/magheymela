@@ -24,7 +24,7 @@ body {
 .parent-organizer .organizer-img img {
   max-height: 350px;
   max-width: 100%;
-  border: 2px solid #333;
+  border: 2px solid #333333b8;
   border-radius: 15px;
   object-fit: contain;
   margin: 0 auto;
@@ -77,4 +77,10 @@ body {
     .parent-organizer .about-organizer {
         padding: 0;
     }
+}
+
+
+/* marker .organizer */
+.organizer-marker{
+  padding: 1rem 0 !important;
 }

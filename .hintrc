@@ -16,6 +16,8 @@
         "listitem": "off"
       }
     ],
-    "disown-opener": "off"
+    "disown-opener": "off",
+    "meta-viewport": "off",
+    "meta-charset-utf-8": "off"
   }
 }

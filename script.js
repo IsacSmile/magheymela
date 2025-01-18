@@ -34,64 +34,64 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Swiper Slider
 var swiper1 = new Swiper(".mySwiper", {
-  loop: true, // Enable infinite loop
-  slidesPerView: 1, // Default number of slides visible
-  spaceBetween: 30, // Default space between slides
+  loop: true, 
+  slidesPerView: 1, 
+  spaceBetween: 30, 
   autoplay: {
-    delay: 3000, // Auto-slide every 2 seconds
-    disableOnInteraction: false, // Keep autoplay active after user interaction
+    delay: 3000, 
+    disableOnInteraction: false, 
   },
   navigation: {
-    nextEl: ".swiper-button-next", // Add navigation buttons if needed
+    nextEl: ".swiper-button-next", 
     prevEl: ".swiper-button-prev",
   },
   pagination: {
-    el: ".swiper-pagination", // Add pagination if needed
+    el: ".swiper-pagination", 
     clickable: true,
   },
   breakpoints: {
     768: {
-      slidesPerView: 1, // For tablets and larger screens
+      slidesPerView: 1, 
       spaceBetween: 0,
     },
     500: {
-      slidesPerView: 1, // For small tablets and larger phones
+      slidesPerView: 1,
       spaceBetween: 0,
     },
     0: {
-      slidesPerView: 1, // For mobile phones
+      slidesPerView: 1, 
       spaceBetween: 0,
     },
   },
 });
 
 var swiper2 = new Swiper(".mySwiper2", {
-  loop: true, // Enable infinite loop
-  slidesPerView: 3, // Default number of slides visible
-  spaceBetween: 30, // Default space between slides
+  loop: true, 
+  slidesPerView: 3, 
+  spaceBetween: 30, 
   autoplay: {
-    delay: 9000, // Auto-slide every 2 seconds
-    disableOnInteraction: false, // Keep autoplay active after user interaction
+    delay: 9000, 
+    disableOnInteraction: false, 
   },
   navigation: {
-    nextEl: ".swiper-button-next", // Add navigation buttons if needed
+    nextEl: ".swiper-button-next", 
     prevEl: ".swiper-button-prev",
   },
   pagination: {
-    el: ".swiper-pagination", // Add pagination if needed
+    el: ".swiper-pagination", 
     clickable: true,
   },
   breakpoints: {
     768: {
-      slidesPerView: 3, // For tablets and larger screens
+      slidesPerView: 3, 
       spaceBetween: 30,
     },
     500: {
-      slidesPerView: 1, // For small tablets and larger phones
+      slidesPerView: 1, 
       spaceBetween: 0,
     },
     0: {
-      slidesPerView: 1, // For mobile phones
+      slidesPerView: 1, 
       spaceBetween: 0,
     },
   },
