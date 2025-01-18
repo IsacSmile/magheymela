@@ -13,10 +13,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const modal = document.getElementById("modal");
   const closeModal = document.getElementById("closeModal");
 
-  // Show modal after 3 seconds
-  setTimeout(() => {
-    modal.classList.add("active");
-  }, 3000);
+  // Check if modal has already been shown
+  if (!localStorage.getItem("modalShown")) {
+    // Show modal after 3 seconds
+    setTimeout(() => {
+      modal.classList.add("active");
+
+      // Set a flag in localStorage that the modal has been shown
+      localStorage.setItem("modalShown", "true");
+    }, 3000);
+  }
 
   // Close modal on button click
   closeModal.addEventListener("click", () => {
@@ -30,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
 // Modal Popup Js
 
 // Swiper Slider
