@@ -564,6 +564,94 @@ a {
   font-weight: 700;
 }
 
+/* Camping CSS STARTS Here  */
+
+.parent-camp-container{
+  max-width: 1500px;
+  margin: 3rem auto;
+  background: #F2F8F2;
+  padding: 3rem 2rem;
+}
+.sub-camp-container{
+  display: flex;
+  align-items: center;
+  max-width: 1300px;
+  margin: auto;
+}
+.sub-camp-container .camp-items{
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.parent-camp-container .camp-heading{
+  font-size: 36px;
+  letter-spacing: 1px;
+}
+.parent-camp-container .camp-heading span{
+  color: #53927F;
+  font-size: 40px;
+}
+.camp-para{
+  width: 70%;
+}
+
+/* marker starts */
+.camp-booking-marker {
+  display: flex;
+  align-items: center;
+  font-size: 16px; 
+  font-weight: 500;
+}
+
+.camp-booking-marker .marker {
+  width: 40px; 
+  height: 1.5px; 
+  background-color: #53927F; 
+  margin-right: 8px; 
+}
+/* marker ends here */
+
+
+.parent-camp-container .camp-btn a {
+  padding: 10px 15px;
+  border-radius: 5px;
+  /* color: white; */
+}
+.parent-camp-container .camp-btn {
+  display: flex;
+  gap: 1.5rem;
+}
+.camp-btn .first-btn{
+  background: #fff;
+  color: black;
+  font-size: 15px;
+  transition: all ease-in-out 0.3s;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.camp-btn .second-btn{
+  background: #53927F;
+  color: #fff;
+  font-size: 15px;
+  transition: all ease-in-out 0.3s;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.first-btn:hover{
+  box-shadow: none;
+  cursor: pointer;
+}
+.second-btn:hover{
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.parent-camp-container img{
+  height: 400px;
+}
+/* Camping CSS ENDS*/
+
+
 /* official */
 .parent-official-container {
   background: rgb(240 249 255 / 59%);
@@ -630,6 +718,38 @@ a {
     font-size: 14px;
     font-weight: 400;
   }
+  
+  /* Camp CSS Starts*/
+  .parent-camp-container {
+    margin: 3rem auto;
+    padding: 3rem 1rem;
+  }
+  .sub-camp-container{
+    flex-direction: column-reverse;
+    gap: 1.5rem;
+  }
+  .parent-camp-container img {
+    height: 270px;
+  }
+  .parent-camp-container .camp-heading {
+    font-size: 26px;
+    /* letter-spacing: 1px; */
+  }
+  .parent-camp-container .camp-heading span {
+    font-size: 30px;
+  }
+  .camp-para {
+    width: 100%;
+  }
+  .camp-booking-marker .marker {
+    width: 30px;
+  }
+  .parent-camp-container .camp-btn a {
+    padding: 8px 10px;
+    border-radius: 5px;
+    /* color: white; */
+  }
+   /* Camp CSS Ends */
 }
 
 @media (max-width: 768px) and (min-width: 501px) {
@@ -645,6 +765,24 @@ a {
   .official-heading {
     font-size: 32px;
     font-weight: 500;
+  }
+  /* camp css  */
+  .parent-camp-container {
+    padding: 3rem 1rem;
+    /* margin: 1rem; */
+  }
+  .parent-camp-container img{
+    height: 290px;
+  }
+  .parent-camp-container .camp-heading {
+    font-size: 30px;
+    letter-spacing: 1px;
+  }
+  .parent-camp-container .camp-heading span {
+    font-size: 35px;
+  }
+  .camp-para {
+    width: 100%;
   }
 }
 
@@ -709,7 +847,15 @@ a {
   .desktop-version {
     display: none;
   }
+
+  /* Camp css  */
+  .camp-para {
+    width: 90%;
 }
+  .parent-camp-container img {
+    height: 340px;
+  }
+  }
 
 @media (min-width: 1000px) {
   /* Laptops and larger screens */
